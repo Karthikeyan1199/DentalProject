@@ -1,0 +1,51 @@
+.ui-button{
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    &-container{
+        border-radius: 20px;
+        background-color: var(--button-background-color);
+        color: var( --button-text-color);
+        border-radius: 24px;
+        padding: 1rem;
+        height: 3rem;
+        width: 14rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, #000000 50%,var(--button-background-color) 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+        &-inner{
+            display: flex;
+            gap: 1rem;
+            justify-content: space-between;
+            .button-name{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .button-icon{
+                background-color: var(--secondary-button-background-color);
+                border-radius: 50%;
+                padding: 8px;
+                color: var(--secondary-button-text-color);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .anticon{
+                    transform: rotate(-40deg);
+                    transition: all .3s linear;
+                }
+            }
+        }
+        &:hover{
+            background-position: left bottom;
+            .anticon{
+                transform: unset;
+            }
+        }
+    }
+    
+}

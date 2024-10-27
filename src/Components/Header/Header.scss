@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid #0E384C1A;
+    height: 80px;
+    justify-content: space-between;
+
+
+    &-left {
+        flex: 1;
+        margin-left: 3rem;
+        width: 100%;
+    }
+
+    &-right {
+        @media only screen and (max-width: 1024px) {
+            .ui-button{
+                display: none;
+            }
+        }
+        flex: 1;
+        justify-content: end;
+        display: flex;
+        width: 100%;
+        margin-right: 3rem;
+      
+    }
+}

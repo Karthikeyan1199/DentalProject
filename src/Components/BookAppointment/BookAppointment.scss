@@ -1,0 +1,77 @@
+.book-appointment{
+    &-card{
+        &-container{
+            box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.058823529411764705);
+            padding: 1rem;
+            background-color: transparent;
+            border-color: var(--border-color);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 620px;
+            .ant-card-body{
+                @media only screen and (max-width: 1024px) {
+                    padding: 12px !important;
+                 }
+            }
+            @media only screen and (max-width: 1024px) {
+                padding: 12px;
+                width: unset;
+             }
+            &-inner{
+               display: flex;
+               gap: 0.5rem;
+               align-items: center;
+               justify-content: center;
+               font-size: 3rem;
+               width: 100%;
+               text-align: center;
+               font-weight: bolder;
+               color: var(--primary-color);
+               :nth-child(2){
+                color: var(--highlight-color);
+               }
+               @media only screen and (max-width: 1024px) {
+                font-size: 16px;
+             }
+            }
+            &-inner-instruction{
+                margin: 10px;
+                font-size: 16px;
+                text-align: center;
+                color: var(--primary-instruction-text-color);
+                width:  100%;
+                display: flex;
+            }
+            &-contents{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                width: 100%;
+                flex-direction: column;
+                @media only screen and (max-width: 1024px) {
+                    padding: 12px;
+                 }
+                .form-input{
+                    background: transparent;
+                    height: 50px;
+                    width: 100%;
+                    background-color: transparent;
+                    border-color: var(--border-color);
+                    font-size: 16px;
+                    color: rgb(14, 56, 76);
+                }
+
+            }
+            &-start{
+                margin-left: 2rem;
+                @media only screen and (max-width: 1024px) {
+                    margin-left: unset;
+                 }
+            }
+        }
+    }
+}
