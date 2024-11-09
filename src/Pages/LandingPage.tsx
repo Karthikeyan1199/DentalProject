@@ -1,4 +1,5 @@
 import BasicDetails from "../Components/BasicDetails/BasicDetails.component"
+import Footer from "../Components/Footer/Footer"
 import Header from "../Components/Header/Header"
 
 const LandingPage = () => {
@@ -7,7 +8,7 @@ const LandingPage = () => {
         <div className="landing-page-container">
             <BasicDetails/>
         </div>
-
+        <Footer/>
     </div>
 
 }
