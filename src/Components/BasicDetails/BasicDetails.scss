@@ -11,10 +11,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
     .image-container {
         position: relative;
         width: 100%;
-        display:block
       }
       
       .image-container img {
@@ -45,6 +45,7 @@
            align-items: center;
            flex-wrap: wrap;
            max-width: 55%;
+           z-index: 2;
            :nth-child(2),:nth-child(3){
             color: var(--highlight-color);
            }

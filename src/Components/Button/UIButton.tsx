@@ -10,7 +10,7 @@ interface UIButtonProps {
 const UIButton = (props: UIButtonProps) => {
     const { buttonName = "", buttonClass = "", handleClick } = props;
 
-    return <div className="ui-button">
+    return <div className={`ui-button ${buttonClass}`}>
         <button className="ui-button-container" onClick={handleClick}>
             <div className="ui-button-container-inner">
                 <span className="button-name">{buttonName}</span>
