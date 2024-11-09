@@ -1,4 +1,4 @@
-import { Card, Col, DatePicker, Flex, Form, Input, Row, Typography } from "antd";
+import { Card, DatePicker, Form, Input, Row } from "antd";
 import React from "react";
 import "./BookAppointment.scss"
 import UIButton from "../Button/UIButton";
