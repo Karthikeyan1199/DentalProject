@@ -1,0 +1,99 @@
+.location {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+
+    &-map {
+        width: 50%;
+        border-radius: 0px 20px 20px 0px;
+        padding-left: 1rem;
+        position: relative;
+    }
+
+    &-address {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        position: relative;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 40px;
+
+        &-header {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: flex-start;
+            &-icon{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding-left: 12px;
+                margin: 1rem;
+                &-text{
+                    font-size: 18px;
+                    line-height: 1.8em;
+                    letter-spacing: 1px;
+                    color: #527282;
+                }
+            }
+
+            &-text {
+                position: relative;
+                padding-left: 20px;
+                color: #1E84B5;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: uppercase;
+                line-height: 1.5em;
+                letter-spacing: 0.2em;
+                margin: 0;
+
+                &-instruction {
+                    margin: 0;
+                    text-align: left;
+                    padding: 12px;
+                    :nth-child(odd){
+                        color: var(--highlight-color);
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 3%;
+                    left: 4%;
+                    transform: translateY(-50%);
+                    background: url(Images/icon-sub-heading.svg) no-repeat;
+                    background-position: left center;
+                    background-size: cover;
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+        }
+
+        &-card {
+            box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.0588235294);
+            padding: 1rem;
+            border-color: var(--border-color);
+            background: transparent;
+            border-radius: 0px 20px 20px 0px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+    &-footer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        justify-self: end;
+        align-self: flex-end;
+    }
+}

@@ -1,6 +1,7 @@
 import Constants from "../../Constants";
 import BookAppointment from "../BookAppointment/BookAppointment.component";
 import UIButton from "../Button/UIButton";
+import LocationLoader from "../LocationLoader/LocationLoader";
 import "./BasicDetails.scss"
 const BasicDetails = () => {
     const basicDetailTxt = "Experience Dental Excellence With a Gentle Touch";
@@ -36,8 +37,11 @@ const BasicDetails = () => {
                 </div>
               </div>
               <div className="basic-details-bottom-button">
-              <UIButton buttonName="Book Appointment" />s
+              <UIButton buttonName="Book Appointment" />
               </div>
+            </div>
+            <div className="contact-info">
+               <LocationLoader/>
             </div>
     </div>
 

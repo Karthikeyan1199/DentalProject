@@ -5,6 +5,10 @@
     border: 1px solid #0E384C1A;
     height: 80px;
     justify-content: space-between;
+    @media only screen and (max-width: 1024px) {
+      border: unset;
+      height: 60px;
+     }
 
 
     &-left {
@@ -32,6 +36,7 @@
             @media only screen and (max-width: 1024px) {
                 //display: none;
                 max-width: unset;
+                font-size: 20px;
             }
         }
     }
