@@ -5,7 +5,8 @@ const Constants ={
     logoImg:"Images/logo.png",
     contactIconImg:"Images/icon-sub-heading.svg",
     locationImg:"Images/location.svg",
-    phoneIconImg:"Images/phone-icon.svg"
+    phoneIconImg:"Images/phone-icon.svg",
+    ReviewImg:"Images/Review.jpg"
 
 }
 

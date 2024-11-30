@@ -1,5 +1,10 @@
-.basic-details{
-    &-container{
+.basic-details {
+    @media screen and (max-width:1024px) {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    &-container {
         display: flex;
         flex: 1;
         gap: 1rem;
@@ -8,83 +13,95 @@
         padding: 2rem;
         background-color: var(--secondary-color);
         background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: overlay;
-    .image-container {
-        position: relative;
-        width: 100%;
-      }
-      
-      .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      
-      .image-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Adjust color and opacity */
-      }
-      
-        @media only screen and (max-width: 1024px) {
-           padding: 12px;
-           gap: 12px;
-           flex-direction: column;
-        }
-        
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-blend-mode: overlay;
 
-        &-left{
-           display: flex;
-           align-items: center;
-           flex-wrap: wrap;
-           max-width: 55%;
-           z-index: 2;
-           :nth-child(2),:nth-child(3){
-            color: var(--highlight-color);
-           }
-           @media only screen and (max-width: 1024px) {
-            max-width: unset;
-         }
-           &-text{
-             font-size: 4rem;
-             font-weight: bolder;
-             margin-right: 1rem;
-             @media only screen and (max-width: 1024px) {
-                font-size: 2rem;
-                margin-right: 12px;
-                text-align: left;
-             }
-             
-           }
+        .image-container {
+            position: relative;
+            width: 100%;
         }
-        &-right{
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Adjust color and opacity */
+        }
+
+        @media only screen and (max-width: 1024px) {
+            padding: 12px;
+            gap: 12px;
+            flex-direction: column;
+        }
+
+
+        &-left {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 55%;
+            z-index: 2;
+
+            :nth-child(2),
+            :nth-child(3) {
+                color: var(--highlight-color);
+            }
+
+            @media only screen and (max-width: 1024px) {
+                max-width: unset;
+            }
+
+            &-text {
+                font-size: 4rem;
+                font-weight: bolder;
+                margin-right: 1rem;
+
+                @media only screen and (max-width: 1024px) {
+                    font-size: 2rem;
+                    margin-right: 12px;
+                    text-align: left;
+                }
+
+            }
+        }
+
+        &-right {
             display: flex;
             align-items: center;
             max-width: 40%;
+
             @media only screen and (max-width: 1024px) {
                 max-width: unset;
-             }
+            }
         }
     }
-    &-bottom{
+
+    &-bottom {
         display: flex;
-        background: rgba(14, 56, 76,1);        
+        background: rgba(14, 56, 76, 1);
         height: 120px;
         padding: 16px;
         margin: 8px;
         align-items: center;
+
         @media only screen and (max-width: 1024px) {
             flex-direction: column;
             height: auto;
-         }
-        &-content{
+        }
+
+        &-content {
             display: flex;
             color: white;
             font-weight: bold;
@@ -95,24 +112,31 @@
             padding-right: 30px;
             border-right: 1px solid var(--e-global-color-divider);
             width: 100%;
-            &-icon{
+
+            &-icon {
                 display: flex;
                 align-items: center;
                 margin-right: 10px;
             }
-            &-details{
+
+            &-details {
                 display: flex;
                 flex-direction: column;
                 text-align: left;
-                &-content{
+
+                &-content {
                     font-weight: normal;
                 }
             }
         }
-        &-button{
+
+        &-button {
             justify-content: end;
             display: flex;
             width: 100%;
         }
+    }
+    .review{
+        margin-bottom: 2rem;
     }
 }
