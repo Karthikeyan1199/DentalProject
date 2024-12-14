@@ -100,6 +100,7 @@
 
     &-right {
         width: 100%;
+        color: var(--primary-color, #000);
         h1{
             text-align: left;
             text-decoration: underline;
@@ -109,7 +110,8 @@
         span{
             display: flex;
             text-align: left;
-            font-size: 18px;
+            font-size: 18px;    
+            color: var(--primary-color, #000);
         }
     }
 }

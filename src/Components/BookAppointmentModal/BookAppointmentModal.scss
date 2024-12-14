@@ -1,0 +1,18 @@
+.book-appointment-modal{
+    .book-appointment-card-container{
+        box-shadow: none !important;
+        width: 100%;
+        border: none;
+        &:hover{
+            box-shadow: none !important;
+        }
+    }
+    .ant-modal-close{
+        background-color: var(--highlight-color);
+    color: white;
+    border-radius: 20px;
+    top: -30px;
+    right: -30px;
+    font-weight: bold;
+    }
+}

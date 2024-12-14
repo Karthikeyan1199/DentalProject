@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Constants from "../../Constants";
 import BookAppointment from "../BookAppointment/BookAppointment.component";
 import UIButton from "../Button/UIButton";
@@ -5,10 +6,12 @@ import LocationLoader from "../LocationLoader/LocationLoader";
 import ReviewCarousel from "../ReviewCarousel/ReviewCarousel";
 import OurServices from "../Services/Services";
 import "./BasicDetails.scss"
+import BookAppointmentModal from "../BookAppointmentModal/BookAppointmentModal";
 const BasicDetails = () => {
   const basicDetailTxt = "Experience Dental Excellence With a Gentle Touch";
-  return <div className="basic-details">
-    <div className="basic-details-container" style={{ backgroundImage: `url(${Constants.backgroundImg})` }} >
+  const [showModal,setShowModal]=useState(false);
+  return <><div className="basic-details">
+    <div className="basic-details-container" style={{ backgroundImage: `url(${Constants.backgroundImg})` }}>
 
 
       <div className="basic-details-container-left">
@@ -39,7 +42,7 @@ const BasicDetails = () => {
         </div>
       </div>
       <div className="basic-details-bottom-button">
-        <UIButton buttonName="Book Appointment" />
+        <UIButton buttonName="Book Appointment"  handleClick={() => setShowModal(true)} />
       </div>
     </div>
     <div className="services">
@@ -51,7 +54,9 @@ const BasicDetails = () => {
     <div className="contact-info">
       <LocationLoader />
     </div>
-  </div>
+  </div><>  
+  {showModal ? <BookAppointmentModal showModal={showModal} handleClose={()=>setShowModal(false)}/> : ""}
+    </></>
 
 }
 
